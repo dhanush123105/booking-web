@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMyHall - Find. Book. Celebrate.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <!-- Replace with your actual logo -->
+                    <img src="WhatsApp Image 2025-04-04 at 14.58.32_7520fb0e.jpg" alt="BookMyHall Logo">
+                    <h1>BookMyHall</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="venues.html">Venues</a></li>
+                    <li><a href="vendors.html">Vendors</a></li>
+                    <li><a href="#">Real Weddings</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#" class="btn btn-primary">Back</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Find. Book. Celebrate.</h2>
+                <p>Discover the perfect wedding venues and vendors to make your special day unforgettable</p>
+                
+                <div class="search-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="search" class="form-label">What are you looking for?</label>
+                            <input type="text" id="search" class="form-control" placeholder="Wedding venue, caterer, etc.">
+                        </div>
+                        <div class="form-group">
+                            <label for="category" class="form-label">Location</label>
+                            <select id="category" class="form-control">
+                                <option value="">All Locations</option>
+                                <option value="Hyderabad">Hyderabad</option>
+                                <option value="Jaipur">Jaipur</option>
+                                <option value="Goa">Goa</option>
+                                <option value="Banglore">Banglore</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button id="search-button" class="btn btn-secondary">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <h3 style="margin-bottom: 20px;">Refine Your Search</h3>
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="price-range" class="form-label">Price Range</label>
+                    <select id="price-range" class="form-control">
+                        <option value="">Any Price</option>
+                        <option value="0-50000">Under ₹50,000</option>
+                        <option value="50000-100000">₹50,000 - ₹1,00,000</option>
+                        <option value="100000-200000">₹1,00,000 - ₹2,00,000</option>
+                        <option value="200000-500000">₹2,00,000 - ₹5,00,000</option>
+                        <option value="500000+">Over ₹5,00,000</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="capacity" class="form-label">Guest Capacity</label>
+                    <select id="capacity" class="form-control">
+                        <option value="">Any Capacity</option>
+                        <option value="0-100">Up to 100 guests</option>
+                        <option value="100-300">100-300 guests</option>
+                        <option value="300-500">300-500 guests</option>
+                        <option value="500+">500+ guests</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="ac-type" class="form-label">AC Type</label>
+                    <select id="ac-type" class="form-control">
+                        <option value="">Any</option>
+                        <option value="ac">AC Only</option>
+                        <option value="non-ac">Non-AC Only</option>
+                        <option value="both">Both Available</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="rating" class="form-label">Minimum Rating</label>
+                    <select id="rating" class="form-control">
+                        <option value="">Any Rating</option>
+                        <option value="4">4+ Stars</option>
+                        <option value="3">3+ Stars</option>
+                        <option value="2">2+ Stars</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="amenities" class="form-label">Amenities</label>
+                    <select id="amenities" class="form-control">
+                        <option value="">Any</option>
+                        <option value="parking">Parking</option>
+                        <option value="catering">In-house Catering</option>
+                        <option value="decor">Decoration Services</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venues Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Wedding Venues</h2>
+                <p>Explore our hand-picked selection of stunning wedding venues</p>
+            </div>
+            
+            <div id="venues-container" class="venues-grid">
+                <!-- Venues will be displayed here by JavaScript -->
+            </div>
+            
+            <div class="text-center mt-40">
+                <a href="venues.html" class="btn btn-primary">View All Venues</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="section gallery-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Wedding Inspiration Gallery</h2>
+                <p>Browse through our collection of beautiful wedding moments for inspiration</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Wedding Decoration">
+                    <div class="gallery-caption">Elegant Floral Decor</div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Bride and Groom">
+                    <div class="gallery-caption">Beautiful Couple</div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Wedding Cake">
+                    <div class="gallery-caption">Gorgeous Wedding Cake</div>
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Wedding Ceremony">
+                    <div class="gallery-caption">Traditional Ceremony</div>
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Bridal Preparation">
+                    <div class="gallery-caption">Bridal Preparation</div>
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Wedding Venue">
+                    <div class="gallery-caption">Grand Ballroom</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Couples Say About Us</h2>
+                <p>Hear from couples who found their perfect wedding venues through BookMyHall</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "BookMyHall made finding our wedding venue so easy! We found the perfect beachfront resort in Goa that fit our budget and style."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://www.m9.news/wp-content/uploads/2025/03/serious-planning-needed-for-sreeleela-768x576.jpg" alt="sreelela Sharma">
+                        </div>
+                        <div class="author-info">
+                            <h4>sreelela Sharma</h4>
+                            <p>Married in December 2024</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "The variety of venues available on BookMyHall is amazing. We compared multiple options and got the best deal for our wedding."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZUEHDhxf7-3Eq-egUELdzKt7V37jh10g0oQ&s" alt="allu arjun">
+                        </div>
+                        <div class="author-info">
+                            <h4>allu arjun</h4>
+                            <p>Married in February 2025</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        "Excellent service! The venue representatives were very responsive and helped us customize everything for our big day."
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBqkJaIIxKFRRePiPlm3DbW7-OAt4p7t3O7w&s" alt="samatha">
+                        </div>
+                        <div class="author-info">
+                            <h4>samantha</h4>
+                            <p>Married in March 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About BookMyHall</h3>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>For Couples</h3>
+                    <ul>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Wedding Planning Tools</a></li>
+                        <li><a href="#">Wedding Blog</a></li>
+                        <li><a href="#">Wedding Checklists</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>For Venues & Vendors</h3>
+                    <ul>
+                        <li><a href="#">List Your Business</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Vendor Login</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BookMyHall. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

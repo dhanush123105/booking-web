@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Venues - BookMyHall</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <!-- Replace with your actual logo -->
+                    <img src="WhatsApp Image 2025-04-04 at 14.58.32_7520fb0e.jpg" alt="BookMyHall Logo">
+                    <h1>BookMyHall</h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="venues.html">Venues</a></li>
+                    <li><a href="vendors.html">Vendors</a></li>
+                    <li><a href="#">Real Weddings</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#" class="btn btn-primary">Back</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Venues Hero Section -->
+    <section class="hero" style="height: 50vh;">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Find Your Perfect Wedding Venue</h2>
+                <p>Browse through our collection of stunning venues for your special day</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters Section -->
+    <section class="filters-section">
+        <div class="container">
+            <h3 style="margin-bottom: 20px;">Filter Venues</h3>
+            <div class="filters-container">
+                <div class="filter-group">
+                    <label for="search" class="form-label">Search</label>
+                    <input type="text" id="search" class="form-control" placeholder="Enter venue name...">
+                </div>
+                
+                <div class="filter-group">
+                    <label for="category" class="form-label">Location</label>
+                    <select id="category" class="form-control">
+                        <option value="">All Locations</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Jaipur">Jaipur</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Banglore">Banglore</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="price-range" class="form-label">Price Range</label>
+                    <select id="price-range" class="form-control">
+                        <option value="">Any Price</option>
+                        <option value="0-50000">Under ₹50,000</option>
+                        <option value="50000-100000">₹50,000 - ₹1,00,000</option>
+                        <option value="100000-200000">₹1,00,000 - ₹2,00,000</option>
+                        <option value="200000-500000">₹2,00,000 - ₹5,00,000</option>
+                        <option value="500000+">Over ₹5,00,000</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="capacity" class="form-label">Guest Capacity</label>
+                    <select id="capacity" class="form-control">
+                        <option value="">Any Capacity</option>
+                        <option value="0-100">Up to 100 guests</option>
+                        <option value="100-300">100-300 guests</option>
+                        <option value="300-500">300-500 guests</option>
+                        <option value="500+">500+ guests</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="ac-type" class="form-label">AC Type</label>
+                    <select id="ac-type" class="form-control">
+                        <option value="">Any</option>
+                        <option value="ac">AC Only</option>
+                        <option value="non-ac">Non-AC Only</option>
+                        <option value="both">Both Available</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="filters-container" style="margin-top: 15px;">
+                <div class="filter-group">
+                    <label for="rating" class="form-label">Minimum Rating</label>
+                    <select id="rating" class="form-control">
+                        <option value="">Any Rating</option>
+                        <option value="4">4+ Stars</option>
+                        <option value="3">3+ Stars</option>
+                        <option value="2">2+ Stars</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="amenities" class="form-label">Amenities</label>
+                    <select id="amenities" class="form-control">
+                        <option value="">Any</option>
+                        <option value="parking">Parking</option>
+                        <option value="catering">In-house Catering</option>
+                        <option value="decor">Decoration Services</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group" style="display: flex; align-items: flex-end;">
+                    <button id="apply-filters" class="btn btn-secondary" style="width: 100%;">Apply Filters</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venues Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>All Wedding Venues</h2>
+                <p>Find the perfect venue that matches your preferences</p>
+            </div>
+            
+            <div id="venues-container" class="venues-grid">
+                <!-- Venues will be displayed here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About BookMyHall</h3>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>For Couples</h3>
+                    <ul>
+                        <li><a href="#">How It Works</a></li>
+                        <li><a href="#">Wedding Planning Tools</a></li>
+                        <li><a href="#">Wedding Blog</a></li>
+                        <li><a href="#">Wedding Checklists</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>For Venues & Vendors</h3>
+                    <ul>
+                        <li><a href="#">List Your Business</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Vendor Login</a></li>
+                        <li><a href="#">Success Stories</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Support</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 BookMyHall. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        // Execute after the page loads to show all venues automatically
+        document.addEventListener('DOMContentLoaded', function() {
+            // The main script.js already contains the function to display venues
+            // Just make sure all venues are shown when the page loads
+            document.getElementById('apply-filters').addEventListener('click', function() {
+                applyFilters();
+            });
+            
+            // Show all venues on page load
+            applyFilters();
+        });
+    </script>
+</body>
+</html>
